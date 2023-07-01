@@ -13,13 +13,14 @@ function App() {
   useEffect(()=>{
     localStorage.setItem("todo",JSON.stringify(todo))
   },[todo])
+
   return (
     <div className="small-container">
       <div className="todo-list">
       <Header />
       </div>
+
       <div className="contain-table" >
-        
       <Form 
       input={input}
       setInput={setInput}
@@ -27,12 +28,11 @@ function App() {
       setTodo={setTodo}
       editTodo={editTodo}
       setEditTodo={setEditTodo}
-      
       />
       </div>
 
       <div>
-      <div >
+      
         <hr></hr>
         <hr></hr>
         <hr></hr>
@@ -40,8 +40,7 @@ function App() {
       <h3 className="tast-list">Task-List</h3>
       <hr></hr>
       <hr></hr>
-      </div>
-        <TodoList todo={todo} setTodo={setTodo} setEditTodo={setEditTodo} />
+        <TodoList  todo={todo} setTodo={setTodo} setEditTodo={setEditTodo} />
       </div>
       
     </div>
